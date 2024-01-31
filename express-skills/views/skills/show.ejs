@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body style="display: flex; align-items: center; flex-direction: column;">
+<body style="display: flex; align-items: center; flex-direction: column; gap: 5vh;">
   <h3><%= skill.skill %></h3>
   <h3>Experiance out of 10: <%= skill.experiance %></h3>
+  <a href="/skills/<%= skill.id %>/edit">Edit</a>
   <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
-    <button type="submit">Remove Skill</button>
+    <button type="submit" style="display: block;">Remove Skill</button>
     </form>
 </body>
 </html>

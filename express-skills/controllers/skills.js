@@ -32,7 +32,7 @@ const edit = (req, res) => {
 
 const update = (req, res) => {
   Skill.update(req.params.id, req.body.skill, req.body.experiance)
-  res.redirect('/skills')
+  res.redirect(`/skills/${req.params.id}`)
 }
 
 module.exports = { index, show, newSkill, create, removeSkill, edit, update }
